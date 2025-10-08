@@ -1,0 +1,18 @@
+# Start the program
+def main():
+    # Ask the user to input their full name
+    full_name = input("Please enter your full name (First Name, Middle Name, Last Name): ")
+    
+    # Split the input by commas
+    firstName, middleName, lastName = [name.strip() for name in full_name.split(',')]
+    
+    # Capitalize the first letter of each name
+    firstName = firstName.capitalize()
+    middleName = middleName.capitalize()[0] + '.'
+    lastName = lastName.capitalize()
+    
+    # Combine the names
+    formatted_name = f"{lastName}, {firstName} {middleName}"
+    
+    # Display the formatted name
+    print(f"Formatted Name: {formatted_name}")
